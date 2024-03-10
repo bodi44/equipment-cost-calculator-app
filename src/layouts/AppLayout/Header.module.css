@@ -1,0 +1,19 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  width: 100%;
+}
+
+.link {
+  color: white;
+}
+
+.activeLink {
+  color: yellow;
+}
+
+.mainContainer {
+  max-width: 1000px;
+  padding: 0 1rem;
+}
