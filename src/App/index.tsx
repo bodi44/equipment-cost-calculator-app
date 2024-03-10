@@ -5,7 +5,7 @@ import { useForm, Controller } from 'react-hook-form';
 import Plot from 'react-plotly.js';
 import { ICostFormValues } from '../interfaces.ts';
 import { calculateComponentsTotalCost } from '../utils.ts';
-import { ANALYTIC_EQUATIONS_LIST } from '../constants.ts';
+import { ANALYTIC_EQUATIONS_CONFIG } from '../constants.ts';
 
 export default function App() {
   const { handleSubmit, watch, formState, control, register } = useForm<ICostFormValues>({
@@ -71,7 +71,7 @@ export default function App() {
                 id='select'
                 isMulti
                 placeholder='Оберіть опцію...'
-                options={ANALYTIC_EQUATIONS_LIST}
+                options={ANALYTIC_EQUATIONS_CONFIG}
                 value={field.value}
                 onChange={(newValue) => {
                   field.onChange(newValue);

@@ -8,6 +8,7 @@ export interface ICostFormValues {
 export interface IDeviceItem {
   label: string;
   value: string;
-  formula: (n?: number, m?: number) => number;
+  costFormula: (n?: number, m?: number) => number;
+  speedFormula: (n?: number, m?: number) => number;
   hasNodes: boolean;
 }
