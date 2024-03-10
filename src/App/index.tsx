@@ -127,29 +127,31 @@ export default function App() {
         </button>
       </form>
 
-      <div className={styles.title}>
-        <h2 className={styles.title}>Результати обчислень</h2>
-        <p className={styles.title}>Витрати на обране обладнання: {totalCost}</p>
+      {totalCost > 0 && plotCosts.length && (
+        <div className={styles.title}>
+          <h2 className={styles.title}>Результати обчислень</h2>
+          <p className={styles.title}>Витрати на обране обладнання: {totalCost}</p>
 
-        <Plot
-          data={[
-            {
-              x: plotNValues,
-              y: plotCosts,
-              type: 'scatter',
-              mode: 'lines+markers',
-              marker: { color: 'blue' },
-            },
-          ]}
-          layout={{
-            width: 800,
-            height: 500,
-            title: 'Залежність Витрат на обладнання від кількості операндів N',
-            xaxis: { title: 'Кількість операндів N' },
-            yaxis: { title: 'Витрати на обладнання' },
-          }}
-        />
-      </div>
+          <Plot
+            data={[
+              {
+                x: plotNValues,
+                y: plotCosts,
+                type: 'scatter',
+                mode: 'lines+markers',
+                marker: { color: 'blue' },
+              },
+            ]}
+            layout={{
+              width: 800,
+              height: 500,
+              title: 'Залежність Витрат на обладнання від кількості операндів N',
+              xaxis: { title: 'Кількість операндів N' },
+              yaxis: { title: 'Витрати на обладнання' },
+            }}
+          />
+        </div>
+      )}
     </>
   );
 }
