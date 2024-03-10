@@ -3,22 +3,21 @@ import Cost from '../pages/Cost';
 import Speed from '../pages/Speed';
 import Error from '../pages/Error';
 import { AppLayout } from '../layouts/AppLayout';
-
-const baseUrl = process.env.NODE_ENV === 'production' ? '/equipment-cost-calculator-app' : '';
+import { APP_ROUTES, BASE_URL } from '../constants.ts';
 
 const router = createBrowserRouter([
   {
-    path: baseUrl,
+    path: BASE_URL,
     element: <AppLayout />,
     errorElement: <Error />,
     children: [
       {
-        path: `${baseUrl}/cost`,
+        path: APP_ROUTES.costPage,
         element: <Cost />,
         errorElement: <Error />,
       },
       {
-        path: `${baseUrl}/speed`,
+        path: APP_ROUTES.speedPage,
         element: <Speed />,
         errorElement: <Error />,
       },
@@ -26,7 +25,7 @@ const router = createBrowserRouter([
   },
   {
     path: '*',
-    element: <Navigate to={`${baseUrl}/cost`} />,
+    element: <Navigate to={APP_ROUTES.costPage} />,
   },
 ]);
 

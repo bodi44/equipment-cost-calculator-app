@@ -1,6 +1,13 @@
 import { v4 as uuidv4 } from 'uuid';
 import { IDeviceItem } from './interfaces.ts';
 
+export const BASE_URL = process.env.NODE_ENV === 'production' ? '/equipment-cost-calculator-app' : '';
+
+export const APP_ROUTES = {
+  costPage: `${BASE_URL}/cost`,
+  speedPage: `${BASE_URL}/speed`,
+};
+
 export const ANALYTIC_EQUATIONS_CONFIG: IDeviceItem[] = [
   {
     value: uuidv4(),
