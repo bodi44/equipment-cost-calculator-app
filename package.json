@@ -1,0 +1,37 @@
+{
+  "name": "my-expense-calc-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "plotly.js": "^2.30.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.51.0",
+    "react-plotly.js": "^2.6.0",
+    "react-select": "^5.8.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/plotly.js": "^2.29.2",
+    "@types/react": "^18.2.56",
+    "@types/react-dom": "^18.2.19",
+    "@types/react-plotly.js": "^2.6.3",
+    "@types/uuid": "^9.0.8",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "prettier": "3.2.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4"
+  }
+}
