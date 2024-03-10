@@ -5,7 +5,7 @@ export function AppLayout() {
   return (
     <>
       <header className={styles.headerContainer}>
-        <NavLink to={'/cost'} className={({ isActive }) => (isActive ? styles.activeLink : styles.link)}>
+        <NavLink to={`/cost`} className={({ isActive }) => (isActive ? styles.activeLink : styles.link)}>
           Програма обчислення витрат
         </NavLink>
         <NavLink to={'/speed'} className={({ isActive }) => (isActive ? styles.activeLink : styles.link)}>
